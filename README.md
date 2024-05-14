@@ -1,1 +1,2 @@
 # Sensor-Anamoly-Detection
+Developed a sensor anomaly detection system involves gathering sensor data, processing it with an STM32F4VGT6 microcontroller, and transmitting it to an ESP32 WROOM - E via CAN bus. The ESP32  WROOM - E then communicates with the cloud using MQTT, enabling real-time monitoring and analysis of sensor readings. This project ensures timely detection of anomalies in sensor data, enhancing system reliability and efficiency.
