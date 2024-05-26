@@ -1,2 +1,28 @@
 # Sensor-Anamoly-Detection
-Developed a sensor anomaly detection system involves gathering sensor data, processing it with an STM32F4VGT6 microcontroller, and transmitting it to an ESP32 WROOM - E via CAN bus. The ESP32 WROOM - E then communicates with the cloud using MQTT, enabling real-time monitoring and analysis of sensor readings. Additionally, the ESP32 WROOM - E also transmits data to a SPI Screen Module TFT Interface, providing on-site visualization of sensor metrics, further facilitating monitoring and quick decision-making. This project ensures timely detection of anomalies in sensor data, enhancing system reliability and efficiency.
+• Sensor anomaly detection system designed
+  for real-time monitoring and analysis.
+• Utilizes an STM32F4VGT6 microcontroller
+  for gathering and processing sensor data.
+• Incorporates FreeRTOS for efficient task
+  scheduling and management, enhancing
+  system robustness and ensuring timely
+  processing of sensor data for anomaly
+  detection.
+• Data transmission facilitated via CAN bus
+  to an ESP32 WROOM - E module.
+• ESP32 WROOM - E communicates with the
+  cloud using MQTT for remote monitoring
+  and analysis.
+• On-site visualization enabled through a SPI
+  Screen Module TFT Interface, displaying
+  sensor metrics for quick decision-making.
+• To enhance anomaly detection, two rules 
+  have been implemented: the z-score
+  method and a rule-based approach. 
+• These rules complement the real-time
+  monitoring and analysis system, ensuring
+  comprehensive anomaly detection and
+  improving system reliability and efficiency.
+• Ensures timely detection of anomalies in
+  sensor data, enhancing system reliability
+  and efficiency.
