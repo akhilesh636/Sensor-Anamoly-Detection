@@ -1,42 +1,41 @@
 **Sensor Anomaly Detection System** <br><br>
-This project implements an advanced Sensor Anomaly Detection System for real-time monitoring and analysis of sensor data. The system uses a combination of hardware components and software to detect anomalies in sensor data and ensure timely intervention in critical systems. <br><br>
+* This project implements an advanced Sensor Anomaly Detection System for real-time monitoring and analysis of sensor data. The system uses a combination of hardware components and software to detect anomalies in sensor data and ensure timely intervention in critical systems. <br><br>
 
 **Features:** <br>
-Real-time anomaly detection using sensor data, leveraging both statistical and rule-based methods. <br>
-STM32F4VGT6 microcontroller for data acquisition and processing. <br>
-FreeRTOS for task scheduling, ensuring responsive and efficient management of multiple concurrent operations.<br>
-CAN bus communication for transferring sensor data to the ESP32 WROOM-E.<br>
-Cloud communication via MQTT for remote monitoring, analysis, and alerting.<br>
-On-site visualization using an SPI Screen Module TFT Interface for displaying sensor data.<br><br>
+* Real-time anomaly detection using sensor data, leveraging both statistical and rule-based methods. <br>
+* STM32F4VGT6 microcontroller for data acquisition and processing. <br>
+* FreeRTOS for task scheduling, ensuring responsive and efficient management of multiple concurrent operations.<br>
+* CAN bus communication for transferring sensor data to the ESP32 WROOM-E.<br>
+* Cloud communication via MQTT for remote monitoring, analysis, and alerting.<br>
+* On-site visualization using an SPI Screen Module TFT Interface for displaying sensor data.<br><br>
 **Two main anomaly detection techniques:** <br>
-Z-score method for statistical anomaly detection.  <br>
-Rule-based approach for predefined threshold-based anomaly detection.  <br> <br>
+* Z-score method for statistical anomaly detection.  <br>
+* Rule-based approach for predefined threshold-based anomaly detection.  <br> <br>
 **System Overview** <br>
 The sensor anomaly detection system is designed to operate autonomously in real-time while maintaining high reliability and efficiency. Below is a breakdown of its main components and how they interact:  <br>
+* **Components**  <br>
+* **STM32F4VGT6 Microcontroller** <br>
 
-**Components**  <br>
-**STM32F4VGT6 Microcontroller** <br>
+- The core of the system, this microcontroller is responsible for acquiring data from sensors, processing it, and performing the anomaly detection algorithms.
+- It runs FreeRTOS for efficient management of multiple tasks, including sensor reading, anomaly detection, and data transmission. <br>
+* **FreeRTOS**  <br>
 
-The core of the system, this microcontroller is responsible for acquiring data from sensors, processing it, and performing the anomaly detection algorithms.
-It runs FreeRTOS for efficient management of multiple tasks, including sensor reading, anomaly detection, and data transmission. <br>
-**FreeRTOS**  <br>
+- FreeRTOS is used to schedule tasks, such as reading sensor data, detecting anomalies, and communicating with the ESP32 module. It ensures that the system remains responsive and can handle real-time sensor data without delays.  <br>
+* **CAN Bus**  <br>
 
-FreeRTOS is used to schedule tasks, such as reading sensor data, detecting anomalies, and communicating with the ESP32 module. It ensures that the system remains responsive and can handle real-time sensor data without delays.  <br>
-**CAN Bus**  <br>
+- The Controller Area Network (CAN bus) is used to transmit sensor data from the STM32F4VGT6 microcontroller to the ESP32 WROOM-E module. This bus system is robust and allows for reliable data transmission even in noisy environments. <br>
+* **ESP32 WROOM-E Module**  <br>
 
-The Controller Area Network (CAN bus) is used to transmit sensor data from the STM32F4VGT6 microcontroller to the ESP32 WROOM-E module. This bus system is robust and allows for reliable data transmission even in noisy environments. <br>
-**ESP32 WROOM-E Module**  <br>
+- The ESP32 is used for cloud communication. It receives data from the STM32 via CAN bus and sends it to a cloud service using the MQTT protocol. This enables remote monitoring, analysis, and alerting based on detected anomalies. <br>
+* **SPI Screen Module (TFT Interface)**  <br>
 
-The ESP32 is used for cloud communication. It receives data from the STM32 via CAN bus and sends it to a cloud service using the MQTT protocol. This enables remote monitoring, analysis, and alerting based on detected anomalies. <br>
-**SPI Screen Module (TFT Interface)**  <br>
-
-A TFT LCD screen connected via SPI is used to display key sensor metrics locally, enabling real-time decision-making on-site. This visual interface helps users monitor the system without needing to access the cloud.  <br>
-**Anomaly Detection**  <br>
-Two primary anomaly detection methods are implemented to ensure the system can accurately identify unusual sensor readings:  <br>
+- A TFT LCD screen connected via SPI is used to display key sensor metrics locally, enabling real-time decision-making on-site. This visual interface helps users monitor the system without needing to access the cloud.  <br>
+* **Anomaly Detection**  <br>
+- Two primary anomaly detection methods are implemented to ensure the system can accurately identify unusual sensor readings:  <br>
 
 *Z-score Method:*  <br>
 
-This statistical method computes the Z-score of incoming sensor data to detect outliers. A high Z-score indicates that the sensor reading is significantly different from the mean, potentially indicating an anomaly.  <br>
+- This statistical method computes the Z-score of incoming sensor data to detect outliers. A high Z-score indicates that the sensor reading is significantly different from the mean, potentially indicating an anomaly.  <br>
 *Rule-based Approach:*  <br>
 
 Custom thresholds are defined based on expected sensor behavior. If the sensor data exceeds or falls below these thresholds, an anomaly is flagged. This approach is suitable for detecting known, predefined issues in the system. <br>
@@ -79,30 +78,27 @@ Step 5: SPI Screen Module Setup <br>
 Connect the SPI TFT screen to the STM32F4VGT6 microcontroller. <br>
 Update the code to display relevant sensor data on the screen. This may include the current sensor values, anomaly status, and other metrics. <br><br>
 **Usage** <br>
-Monitoring Anomalies<br>
-Once the system is up and running, it will continuously monitor sensor data in real-time. The following steps outline the key operations of the system: <br>
+* Monitoring Anomalies<br>
+- Once the system is up and running, it will continuously monitor sensor data in real-time. The following steps outline the key operations of the system: <br>
+- *Local Display:* The SPI TFT screen will show sensor values and anomaly status on-site. If an anomaly is detected, the screen will show a warning or highlight the issue for local attention. <br>
 
-*Local Display:* The SPI TFT screen will show sensor values and anomaly status on-site. If an anomaly is detected, the screen will show a warning or highlight the issue for local attention. <br>
+- *Cloud Monitoring:* The ESP32 WROOM-E module will periodically send sensor data to the cloud via MQTT. Remote users can connect to the MQTT broker to receive real-time sensor readings and alerts. <br>
 
-*Cloud Monitoring:* The ESP32 WROOM-E module will periodically send sensor data to the cloud via MQTT. Remote users can connect to the MQTT broker to receive real-time sensor readings and alerts. <br>
+- *Anomaly Detection:* The system uses the Z-score method and rule-based approach to detect anomalies in sensor data. If an anomaly is detected, the system will flag it locally on the display and remotely in the cloud. <br>
 
-*Anomaly Detection:* The system uses the Z-score method and rule-based approach to detect anomalies in sensor data. If an anomaly is detected, the system will flag it locally on the display and remotely in the cloud. <br>
-
-*Alerts:* Optionally, the system can be configured to send email or SMS alerts if an anomaly exceeds a critical threshold. <br><br>
-
-**Example Data Flow**
-Sensors generate data. <br>
-The STM32F4VGT6 microcontroller collects and processes the data. <br>
-FreeRTOS schedules tasks to detect anomalies and send data to the ESP32. <br>
-The ESP32 sends the data to the cloud using MQTT. <br>
-Data is visualized on the SPI TFT screen and/or remote cloud dashboard. <br><br>
+- *Alerts:* Optionally, the system can be configured to send email or SMS alerts if an anomaly exceeds a critical threshold. <br><br>
+**Example Data Flow** <br>
+* Sensors generate data. <br>
+* The STM32F4VGT6 microcontroller collects and processes the data. <br>
+* FreeRTOS schedules tasks to detect anomalies and send data to the ESP32. <br>
+* The ESP32 sends the data to the cloud using MQTT. <br>
+* Data is visualized on the SPI TFT screen and/or remote cloud dashboard. <br><br>
 **Contributing**
-We welcome contributions to improve the functionality and performance of this project. If you'd like to contribute, please follow these steps: <br>
-
-Fork the repository to your own GitHub account. <br>
-Create a new branch for your feature or fix (git checkout -b feature-name). <br>
-Make changes and commit them (git commit -am 'Added new feature'). <br>
-Push the changes to your fork (git push origin feature-name). <br>
-Submit a pull request with a description of your changes. <br>
-**License**
-This project is licensed under the MIT License - see the LICENSE file for details.
+* We welcome contributions to improve the functionality and performance of this project. If you'd like to contribute, please follow these steps: <br>
+* Fork the repository to your own GitHub account. <br>
+* Create a new branch for your feature or fix (git checkout -b feature-name). <br>
+* Make changes and commit them (git commit -am 'Added new feature'). <br>
+* Push the changes to your fork (git push origin feature-name). <br>
+* Submit a pull request with a description of your changes. <br>
+**License** <br>
+* This project is licensed under the MIT License - see the LICENSE file for details.
