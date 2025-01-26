@@ -16,8 +16,8 @@ The sensor anomaly detection system is designed to operate autonomously in real-
 * **Components**  <br>
 * **STM32F4VGT6 Microcontroller** <br>
 
- - The core of the system, this microcontroller is responsible for acquiring data from sensors, processing it, and performing the anomaly detection algorithms.
- - It runs FreeRTOS for efficient management of multiple tasks, including sensor reading, anomaly detection, and data transmission. <br>
+  - The core of the system, this microcontroller is responsible for acquiring data from sensors, processing it, and performing the anomaly detection algorithms.
+  - It runs FreeRTOS for efficient management of multiple tasks, including sensor reading, anomaly detection, and data transmission. <br>
 * **FreeRTOS**  <br>
 
 - FreeRTOS is used to schedule tasks, such as reading sensor data, detecting anomalies, and communicating with the ESP32 module. It ensures that the system remains responsive and can handle real-time sensor data without delays.  <br>
