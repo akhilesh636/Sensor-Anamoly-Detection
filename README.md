@@ -36,6 +36,7 @@ The sensor anomaly detection system is designed to operate autonomously in real-
 *Z-score Method:*  <br>
 
 - This statistical method computes the Z-score of incoming sensor data to detect outliers. A high Z-score indicates that the sensor reading is significantly different from the mean, potentially indicating an anomaly.  <br>
+
 *Rule-based Approach:*  <br>
 
 Custom thresholds are defined based on expected sensor behavior. If the sensor data exceeds or falls below these thresholds, an anomaly is flagged. This approach is suitable for detecting known, predefined issues in the system. <br>
@@ -54,29 +55,29 @@ Before getting started, you will need to set up the following tools and environm
 *MQTT Broker:* <br> You will need a cloud-based MQTT broker for remote monitoring. <br>
 
 You can use services like HiveMQ, Mosquitto, or set up your own MQTT broker. <br>
-Step 1: Clone the Repository <br>
+* **Step 1: Clone the Repository** <br>
 Open bash <br>
 Copy <br>
 *git clone https://github.com/yourusername/sensor-anomaly-detection.git* <br>
 *cd sensor-anomaly-detection* <br> <br>
-Step 2: STM32F4 Development Environment Setup <br>
-Open STM32CubeIDE. <br>
-Open the project folder and configure the STM32F4 microcontroller. <br>
-Enable the required peripherals, such as CAN bus, SPI (for TFT), and any other communication interfaces. <br>
-Ensure that FreeRTOS is properly configured for multitasking. <br>
-Compile and flash the firmware onto the STM32F4VGT6. <br><br>
-Step 3: Set Up the ESP32 <br>
-Open Arduino IDE. <br>
-Go to File > Preferences and add the ESP32 board manager URL. <br>
-Install the ESP32 board support. <br>
-Open the ESP32 code file, configure the Wi-Fi credentials and MQTT settings (broker URL, topic, etc.). <br>
-Upload the code to the ESP32 WROOM-E module. <br><br>
-Step 4: Set Up MQTT Broker <br>
-If you're using a service like HiveMQ or Mosquitto, follow the setup instructions to create an MQTT broker and obtain the connection details (broker URL, username, password, etc.). <br>
-Make sure the ESP32 is configured with these details so it can connect and send sensor data to the cloud. <br>
-Step 5: SPI Screen Module Setup <br>
-Connect the SPI TFT screen to the STM32F4VGT6 microcontroller. <br>
-Update the code to display relevant sensor data on the screen. This may include the current sensor values, anomaly status, and other metrics. <br><br>
+* **Step 2: STM32F4 Development Environment Setup** <br>
+- Open STM32CubeIDE. <br>
+- Open the project folder and configure the STM32F4 microcontroller. <br>
+- Enable the required peripherals, such as CAN bus, SPI (for TFT), and any other communication interfaces. <br>
+- Ensure that FreeRTOS is properly configured for multitasking. <br>
+- Compile and flash the firmware onto the STM32F4VGT6. <br><br>
+* **Step 3: Set Up the ESP32** <br>
+- Open Arduino IDE. <br>
+- Go to File > Preferences and add the ESP32 board manager URL. <br>
+- Install the ESP32 board support. <br>
+- Open the ESP32 code file, configure the Wi-Fi credentials and MQTT settings (broker URL, topic, etc.). <br>
+- Upload the code to the ESP32 WROOM-E module. <br><br>
+* **Step 4: Set Up MQTT Broker** <br>
+- If you're using a service like HiveMQ or Mosquitto, follow the setup instructions to create an MQTT broker and obtain the connection details (broker URL, username, password, etc.). <br>
+- Make sure the ESP32 is configured with these details so it can connect and send sensor data to the cloud. <br>
+* **Step 5: SPI Screen Module Setup** <br>
+- Connect the SPI TFT screen to the STM32F4VGT6 microcontroller. <br>
+- Update the code to display relevant sensor data on the screen. This may include the current sensor values, anomaly status, and other metrics. <br><br>
 **Usage** <br>
 * Monitoring Anomalies<br>
 - Once the system is up and running, it will continuously monitor sensor data in real-time. The following steps outline the key operations of the system: <br>
@@ -100,5 +101,3 @@ Update the code to display relevant sensor data on the screen. This may include 
 * Make changes and commit them (git commit -am 'Added new feature'). <br>
 * Push the changes to your fork (git push origin feature-name). <br>
 * Submit a pull request with a description of your changes. <br>
-**License** <br>
-* This project is licensed under the MIT License - see the LICENSE file for details.
