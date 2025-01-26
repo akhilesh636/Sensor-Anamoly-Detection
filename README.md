@@ -8,12 +8,12 @@
 * CAN bus communication for transferring sensor data to the ESP32 WROOM-E.<br>
 * Cloud communication via MQTT for remote monitoring, analysis, and alerting.<br>
 * On-site visualization using an SPI Screen Module TFT Interface for displaying sensor data.<br><br>
-**Two main anomaly detection techniques:** <br>
-* Z-score method for statistical anomaly detection.  <br>
-* Rule-based approach for predefined threshold-based anomaly detection.  <br><br>
+* **Two main anomaly detection techniques:** <br>
+  - Z-score method for statistical anomaly detection.  <br>
+  - Rule-based approach for predefined threshold-based anomaly detection.  <br><br>
 
 **System Overview :** <br>
-The sensor anomaly detection system is designed to operate autonomously in real-time while maintaining high reliability and efficiency. Below is a breakdown of its main components and how they interact:  <br>
+The sensor anomaly detection system is designed to operate autonomously in real-time while maintaining high reliability and efficiency. Below is a breakdown of its main components and how they interact:  <br> <br>
 **Components :**  <br>
 * **STM32F4VGT6 Microcontroller** <br>
 
@@ -74,8 +74,8 @@ You can use services like HiveMQ, Mosquitto, or set up your own MQTT broker. <br
   - Make sure the ESP32 is configured with these details so it can connect and send sensor data to the cloud. <br>
 * **Step 5: SPI Screen Module Setup** <br>
   - Connect the SPI TFT screen to the STM32F4VGT6 microcontroller. <br>
-  - Update the code to display relevant sensor data on the screen. This may include the current sensor values, anomaly status, and other metrics. <br><br>
-**Usage** <br> <br>
+  - Update the code to display relevant sensor data on the screen. This may include the current sensor values, anomaly status, and other metrics. <br> <br>
+**Usage :** <br><br>
 * Monitoring Anomalies<br>
   - Once the system is up and running, it will continuously monitor sensor data in real-time. The following steps outline the key operations of the system: <br>
   - *Local Display:* The SPI TFT screen will show sensor values and anomaly status on-site. If an anomaly is detected, the screen will show a warning or highlight the issue for local attention. <br>
@@ -85,13 +85,13 @@ You can use services like HiveMQ, Mosquitto, or set up your own MQTT broker. <br
   - *Anomaly Detection:* The system uses the Z-score method and rule-based approach to detect anomalies in sensor data. If an anomaly is detected, the system will flag it locally on the display and remotely in the cloud. <br>
 
   - *Alerts:* Optionally, the system can be configured to send email or SMS alerts if an anomaly exceeds a critical threshold. <br><br>
-**Example Data Flow :** <br> <br>
+**Example Data Flow :** <br><br>
 * Sensors generate data. <br>
 * The STM32F4VGT6 microcontroller collects and processes the data. <br>
 * FreeRTOS schedules tasks to detect anomalies and send data to the ESP32. <br>
 * The ESP32 sends the data to the cloud using MQTT. <br>
 * Data is visualized on the SPI TFT screen and/or remote cloud dashboard. <br><br>
-**Contributing :** <br> <br>
+**Contributing :** <br><br>
 * We welcome contributions to improve the functionality and performance of this project. If you'd like to contribute, please follow these steps: <br>
 * Fork the repository to your own GitHub account. <br>
 * Create a new branch for your feature or fix (git checkout -b feature-name). <br>
