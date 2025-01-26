@@ -39,24 +39,23 @@ The sensor anomaly detection system is designed to operate autonomously in real-
       - Custom thresholds are defined based on expected sensor behavior. If the sensor data exceeds or falls below these thresholds, an anomaly is flagged. This approach is suitable for detecting known, predefined issues in the system. <br>
       - Both methods are implemented to complement each other and provide a more comprehensive anomaly detection system. <br><br>
 
-**Installation** <br>
-*Prerequisites* <br>
-Before getting started, you will need to set up the following tools and environments: <br>
-
-*STM32CubeIDE:*  <br>Used for programming the STM32F4VGT6 microcontroller. <br>
-
-[Download STM32CubeIDE](https://www.st.com/en/development-tools/stm32cubeide.html) <br>
-*Arduino IDE:*<br> Required for programming the ESP32 WROOM-E module. <br>
-
-[Download Arduino IDE](https://www.arduino.cc/en/software) <br>
-*MQTT Broker:* <br> You will need a cloud-based MQTT broker for remote monitoring. <br>
-
-You can use services like HiveMQ, Mosquitto, or set up your own MQTT broker. <br>
+**Installation** <br><br>
+* **Prerequisites** <br>
+  - Before getting started, you will need to set up the following tools and environments: <br>
+* **STM32CubeIDE :** <br>
+  - Used for programming the STM32F4VGT6 microcontroller. <br>
+  - [Download STM32CubeIDE](https://www.st.com/en/development-tools/stm32cubeide.html) <br>
+* **Arduino IDE :**<br>
+  - Required for programming the ESP32 WROOM-E module. <br>
+  - [Download Arduino IDE](https://www.arduino.cc/en/software) <br>
+* **MQTT Broker :** <br>
+  - You will need a cloud-based MQTT broker for remote monitoring. <br>
+  - You can use services like HiveMQ, Mosquitto, or set up your own MQTT broker. <br>
 * **Step 1: Clone the Repository** <br>
   - Open bash <br>
   - Copy <br>
   - *git clone https://github.com/yourusername/sensor-anomaly-detection.git* <br>
-  - *cd sensor-anomaly-detection* <br> <br>
+  - *cd sensor-anomaly-detection* <br><br>
 * **Step 2: STM32F4 Development Environment Setup** <br>
   - Open STM32CubeIDE. <br>
   - Open the project folder and configure the STM32F4 microcontroller. <br>
@@ -76,7 +75,7 @@ You can use services like HiveMQ, Mosquitto, or set up your own MQTT broker. <br
   - Connect the SPI TFT screen to the STM32F4VGT6 microcontroller. <br>
   - Update the code to display relevant sensor data on the screen. This may include the current sensor values, anomaly status, and other metrics. <br> <br>
 
-**Usage :** <br><br>
+**Usage :** <br>
 * Monitoring Anomalies<br>
   - Once the system is up and running, it will continuously monitor sensor data in real-time. The following steps outline the key operations of the system: <br>
   - *Local Display:* The SPI TFT screen will show sensor values and anomaly status on-site. If an anomaly is detected, the screen will show a warning or highlight the issue for local attention. <br>
@@ -87,14 +86,14 @@ You can use services like HiveMQ, Mosquitto, or set up your own MQTT broker. <br
 
   - *Alerts:* Optionally, the system can be configured to send email or SMS alerts if an anomaly exceeds a critical threshold. <br><br>
 
-**Example Data Flow :** <br><br>
+**Example Data Flow :** <br>
 * Sensors generate data. <br>
 * The STM32F4VGT6 microcontroller collects and processes the data. <br>
 * FreeRTOS schedules tasks to detect anomalies and send data to the ESP32. <br>
 * The ESP32 sends the data to the cloud using MQTT. <br>
 * Data is visualized on the SPI TFT screen and/or remote cloud dashboard. <br><br>
 
-**Contributing :** <br><br>
+**Contributing :** <br>
 * We welcome contributions to improve the functionality and performance of this project. If you'd like to contribute, please follow these steps: <br>
 * Fork the repository to your own GitHub account. <br>
 * Create a new branch for your feature or fix (git checkout -b feature-name). <br>
