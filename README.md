@@ -1,14 +1,14 @@
-**Sensor Anomaly Detection System**
-This project implements an advanced Sensor Anomaly Detection System for real-time monitoring and analysis of sensor data. The system uses a combination of hardware components and software to detect anomalies in sensor data and ensure timely intervention in critical systems.
+**Sensor Anomaly Detection System** <br><br>
+This project implements an advanced Sensor Anomaly Detection System for real-time monitoring and analysis of sensor data. The system uses a combination of hardware components and software to detect anomalies in sensor data and ensure timely intervention in critical systems. <br><br>
 
-Features
-Real-time anomaly detection using sensor data, leveraging both statistical and rule-based methods.
-STM32F4VGT6 microcontroller for data acquisition and processing.
-FreeRTOS for task scheduling, ensuring responsive and efficient management of multiple concurrent operations.
-CAN bus communication for transferring sensor data to the ESP32 WROOM-E.
-Cloud communication via MQTT for remote monitoring, analysis, and alerting.
-On-site visualization using an SPI Screen Module TFT Interface for displaying sensor data.
-Two main anomaly detection techniques:
+**Features:** <br>
+Real-time anomaly detection using sensor data, leveraging both statistical and rule-based methods. <br>
+STM32F4VGT6 microcontroller for data acquisition and processing. <br>
+FreeRTOS for task scheduling, ensuring responsive and efficient management of multiple concurrent operations.<br>
+CAN bus communication for transferring sensor data to the ESP32 WROOM-E.<br>
+Cloud communication via MQTT for remote monitoring, analysis, and alerting.<br>
+On-site visualization using an SPI Screen Module TFT Interface for displaying sensor data.<br><br>
+**Two main anomaly detection techniques:** <br>
 Z-score method for statistical anomaly detection.
 Rule-based approach for predefined threshold-based anomaly detection.
 System Overview
