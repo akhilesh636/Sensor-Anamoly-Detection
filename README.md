@@ -54,7 +54,7 @@ The sensor anomaly detection system is designed to operate autonomously in real-
 * **Step 1: Clone the Repository** <br>
   - Open bash <br>
   - Copy <br>
-  - '*git clone https://github.com/yourusername/sensor-anomaly-detection.git*' <br>
+  - `*git clone https://github.com/yourusername/sensor-anomaly-detection.git*` <br>
   - *cd sensor-anomaly-detection* <br><br>
 * **Step 2: STM32F4 Development Environment Setup** <br>
   - Open STM32CubeIDE. <br>
