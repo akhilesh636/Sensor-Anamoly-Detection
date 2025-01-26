@@ -52,11 +52,9 @@ The sensor anomaly detection system is designed to operate autonomously in real-
   - You will need a cloud-based MQTT broker for remote monitoring. <br>
   - You can use services like HiveMQ, Mosquitto, or set up your own MQTT broker. <br>
 * **Step 1: Clone the Repository** <br>
-  - Open bash <br>
-  - Copy <br>
   ```bash
-  - git clone https://github.com/yourusername/sensor-anomaly-detection.git <br>
-  - cd sensor-anomaly-detection <br><br>
+  git clone https://github.com/yourusername/sensor-anomaly-detection.git
+  cd sensor-anomaly-detection
 * **Step 2: STM32F4 Development Environment Setup** <br>
   - Open STM32CubeIDE. <br>
   - Open the project folder and configure the STM32F4 microcontroller. <br>
