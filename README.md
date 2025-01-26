@@ -1,7 +1,7 @@
 # **Sensor Anomaly Detection System** <br><br>
 * This project implements an advanced Sensor Anomaly Detection System for real-time monitoring and analysis of sensor data. The system uses a combination of hardware components and software to detect anomalies in sensor data and ensure timely intervention in critical systems. <br><br>
 
-**Features:** <br>
+## **Features:** <br>
 * Real-time anomaly detection using sensor data, leveraging both statistical and rule-based methods. <br>
 * STM32F4VGT6 microcontroller for data acquisition and processing. <br>
 * FreeRTOS for task scheduling, ensuring responsive and efficient management of multiple concurrent operations.<br>
@@ -12,7 +12,7 @@
   - Z-score method for statistical anomaly detection.  <br>
   - Rule-based approach for predefined threshold-based anomaly detection.  <br><br>
 
-**System Overview :** <br>
+## **System Overview :** <br>
 The sensor anomaly detection system is designed to operate autonomously in real-time while maintaining high reliability and efficiency. Below is a breakdown of its main components and how they interact:  <br> <br>
 **Components :**  <br>
 * **STM32F4VGT6 Microcontroller** <br>
@@ -39,7 +39,7 @@ The sensor anomaly detection system is designed to operate autonomously in real-
       - Custom thresholds are defined based on expected sensor behavior. If the sensor data exceeds or falls below these thresholds, an anomaly is flagged. This approach is suitable for detecting known, predefined issues in the system. <br>
       - Both methods are implemented to complement each other and provide a more comprehensive anomaly detection system. <br><br>
 
-**Installation** <br><br>
+## **Installation** <br><br>
 * **Prerequisites** <br>
   - Before getting started, you will need to set up the following tools and environments: <br>
 * **STM32CubeIDE :** <br>
@@ -75,7 +75,7 @@ The sensor anomaly detection system is designed to operate autonomously in real-
   - Connect the SPI TFT screen to the STM32F4VGT6 microcontroller. <br>
   - Update the code to display relevant sensor data on the screen. This may include the current sensor values, anomaly status, and other metrics. <br> <br>
 
-**Usage :** <br>
+## **Usage :** <br>
 * Monitoring Anomalies<br>
   - Once the system is up and running, it will continuously monitor sensor data in real-time. The following steps outline the key operations of the system: <br>
   - *Local Display:* The SPI TFT screen will show sensor values and anomaly status on-site. If an anomaly is detected, the screen will show a warning or highlight the issue for local attention. <br>
@@ -86,14 +86,14 @@ The sensor anomaly detection system is designed to operate autonomously in real-
 
   - *Alerts:* Optionally, the system can be configured to send email or SMS alerts if an anomaly exceeds a critical threshold. <br><br>
 
-**Example Data Flow :** <br>
+## **Example Data Flow :** <br>
 * Sensors generate data. <br>
 * The STM32F4VGT6 microcontroller collects and processes the data. <br>
 * FreeRTOS schedules tasks to detect anomalies and send data to the ESP32. <br>
 * The ESP32 sends the data to the cloud using MQTT. <br>
 * Data is visualized on the SPI TFT screen and/or remote cloud dashboard. <br><br>
 
-**Contributing :** <br>
+## **Contributing :** <br>
 * We welcome contributions to improve the functionality and performance of this project. If you'd like to contribute, please follow these steps: <br>
 * Fork the repository to your own GitHub account. <br>
 * Create a new branch for your feature or fix (git checkout -b feature-name). <br>
