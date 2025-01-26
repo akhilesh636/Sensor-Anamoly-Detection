@@ -1,4 +1,4 @@
-**Sensor Anomaly Detection System** <br><br>
+# **Sensor Anomaly Detection System** <br><br>
 * This project implements an advanced Sensor Anomaly Detection System for real-time monitoring and analysis of sensor data. The system uses a combination of hardware components and software to detect anomalies in sensor data and ensure timely intervention in critical systems. <br><br>
 
 **Features:** <br>
